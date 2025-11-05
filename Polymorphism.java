@@ -1,35 +1,35 @@
-class Greeting 
+class Bike 
 {
-    void sayHello() 
+    void run() 
     {
-        System.out.println("Hello from Greeting");
+        System.out.println("Bike is running");
     }
 }
 
-class EnglishGreeting extends Greeting 
+class SportsBike extends Bike 
 {
-    void sayHello() 
+    void run() 
     {
-        System.out.println("Hello!");
+        System.out.println("SportsBike is running fast!");
     }
 }
 
-class TamilGreeting extends Greeting 
+class ElectricBike extends Bike 
 {
-    void sayHello() 
+    void run() 
     {
-        System.out.println("Vanakkam!");
+        System.out.println("ElectricBike is running silently!");
     }
 }
 
-public class Polymorphism
+public class Polymorphism 
 {
     public static void main(String[] args) 
     {
-        Greeting g1 = new EnglishGreeting();
-        Greeting g2 = new TamilGreeting();
+        Bike b1 = new SportsBike();
+        Bike b2 = new ElectricBike();
 
-        g1.sayHello();
-        g2.sayHello();
+        b1.run();
+        b2.run();
     }
 }
