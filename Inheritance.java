@@ -1,40 +1,41 @@
-class Person 
+class Bike 
 {
-    String name;
+    String brand;
 
-    void setName(String name) 
+    void setBrand(String brand) 
     {
-        this.name = name;
+        this.brand = brand;
     }
 
-    void displayName() 
+    void displayBrand() 
     {
-        System.out.println("Name: " + name);
+        System.out.println("Brand: " + brand);
     }
 }
 
-class Employee extends Person 
+class SportsBike extends Bike 
 {
-    String company;
+    String model;
 
-    void setCompany(String company) 
+    void setModel(String model) 
     {
-        this.company = company;
+        this.model = model;
     }
 
     void showDetails() 
     {
-        System.out.println(name + " works at " + company);
+        System.out.println(brand + " " + model + " is a powerful sports bike.");
     }
 }
 
-public class Inheritance
+public class InheritanceDemo
 {
     public static void main(String[] args) 
     {
-        Employee e = new Employee();
-        e.setName("Karthik");
-        e.setCompany("ABC Finance");
-        e.showDetails();
+        SportsBike bike = new SportsBike();
+        bike.setBrand("Yamaha");
+        bike.setModel("R15");
+        bike.showDetails();
     }
 }
+
