@@ -1,24 +1,52 @@
-class Student 
+class Bike 
 {
-    private String name;
+    private String model;
+    private int speed;
+    private String color;
 
-    public void setName(String name) 
+    public void setModel(String model) 
     {
-        this.name = name;
+        this.model = model;
     }
 
-    public String getName() 
+    public String getModel() 
     {
-        return name;
+        return model;
+    }
+
+    public void setSpeed(int speed) 
+    {
+        this.speed = speed;
+    }
+
+    public int getSpeed() 
+    {
+        return speed;
+    }
+
+    public void setColor(String color) 
+    {
+        this.color = color;
+    }
+
+    public String getColor() 
+    {
+        return color;
     }
 }
 
-public class Encapsulation
+public class Encapsulation 
 {
     public static void main(String[] args) 
     {
-        Student s = new Student();
-        s.setName("Karthik");
-        System.out.println("Student Name: " + s.getName());
+        Bike b = new Bike();
+        b.setModel("Yamaha R15");
+        b.setSpeed(140);
+        b.setColor("Blue");
+
+        System.out.println("Bike Model: " + b.getModel());
+        System.out.println("Bike Speed: " + b.getSpeed() + " km/h");
+        System.out.println("Bike Color: " + b.getColor());
     }
 }
+
