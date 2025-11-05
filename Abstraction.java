@@ -1,27 +1,27 @@
-abstract class Message 
+abstract class Bike 
 {
-    abstract void sendMessage(String text);
+    abstract void run(String model);
 
-    void showSender() 
+    void showBrand() 
     {
-        System.out.println("Sender");
+        System.out.println("Brand: Yamaha");
     }
 }
 
-class EmailMessage extends Message 
+class SportsBike extends Bike 
 {
-    void sendMessage(String text) 
+    void run(String model) 
     {
-        System.out.println(text);
+        System.out.println(model + " is running fast!");
     }
 }
 
-public class Abstraction
+public class Abstraction 
 {
     public static void main(String[] args) 
     {
-        Message msg = new EmailMessage();
-        msg.showSender();
-        msg.sendMessage("Hello Karthik!");
+        Bike bike = new SportsBike();
+        bike.showBrand();
+        bike.run("R15");
     }
 }
